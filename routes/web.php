@@ -20,9 +20,8 @@ Route::resource('assign', 'AssignController');
 
 
 Auth::routes();
-
+Route::get('get_members', 'AssignController@all_members');
 Route::get('assing_to/{id}', 'AssignController@assign_to');
 Route::put('assing/{maneger_id}/{user_id}', 'AssignController@assign');
 Route::post('assing/register_user', 'AssignController@register_user');
-
 Route::get('home', 'HomeController@index')->name('home');
